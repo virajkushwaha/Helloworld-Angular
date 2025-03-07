@@ -1,0 +1,15 @@
+
+<main class="main">
+  <div class="container">
+    <h1 class = "heading">{{this.title}}</h1>
+    <img [src]="imgUrl" id="logo" (click) = "onClick()" alt="The BridgeLabLogo">
+    <div>
+      <label >{{this.errorMessage}}</label><br>
+      <input type="text" [(ngModel)]="userName" (input) = "validateName()"  placeholder="Name is Required"/>
+      <h2 *ngIf ="userName && !errorMessage" class="greeting">Hello {{this.userName}} from Bridgelabz</h2>
+    </div>
+  </div>
+</main>
+
+
+<router-outlet />
